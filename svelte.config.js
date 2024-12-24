@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-node"
+import adapter from '@sveltejs/adapter-vercel';
 import { mdsvex } from 'mdsvex'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
