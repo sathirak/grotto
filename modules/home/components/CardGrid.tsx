@@ -1,0 +1,21 @@
+import { Card } from "@/modules/home/components/Card";
+
+export const CardGrid = () => {
+
+    const cardData = {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante",
+        date: "Yesterday / 2 min read",
+        slug: "/blog/lorem-ipsum",
+        image: {
+            src: "/assets/blog-placeholder.jpg",
+            alt: "Blog Placeholder Image",
+        }
+    }
+
+    return (
+        <section className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 w-11/12 lg:w-3/4 my-16">
+            {[...Array(10)].map((_, index) =>
+                <Card key={index} {...cardData}/>
+            )}
+        </section>);
+};
