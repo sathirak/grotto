@@ -1,4 +1,5 @@
 import { redHatText, redHatMono } from "@/app/layout";
+import { ContentHeader } from "@/modules/devlog/components/ContentHeader";
 
 interface Props {
 	children: React.ReactNode;
@@ -9,21 +10,15 @@ interface Props {
 
 export const Devlog = (props: Props) => {
 	return (
-		<main className={`flex flex-col items-center ${redHatText.className}`}>
-			<section className="w-11/12 lg:w-1/2 my-8">
-				<h1
-					className={`text-4xl lg:text-5xl font-medium mb-6 ${redHatMono.className}`}
-				>
-					{props.title}
-				</h1>
-				<p className="text-2xl text-zinc-700 mb-6">{props.description}</p>
-				<img
-					className=" rounded-md w-full aspect-video object-cover"
-					src={`/content/${props.slug}/assets/main.jpg`}
-					alt={props.title}
-				/>
+		<main className={"flex flex-col items-center"}>
+			<ContentHeader
+				slug={props.slug}
+				title={props.title}
+				description={props.description}
+			/>
+			<section className={`w-11/12 lg:w-1/2 my-8 ${redHatText.className}`}>
+				{props.children}
 			</section>
-			<section className="w-11/12 lg:w-1/2 my-8">{props.children}</section>
 		</main>
 	);
 };
