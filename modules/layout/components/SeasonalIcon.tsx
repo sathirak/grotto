@@ -15,7 +15,7 @@ interface Props {
 }
 
 export const SeasonalIcon = (props: Props) => {
-    const { currentIndex, ...restProps } = props;
+    const { currentIndex, ...imgProps } = props;
     const icons = [FarmlandImage, NatureImage, SnowImage, MountainImage, IceImage, CaveImage];
 
     const currentIcon = icons[currentIndex];
@@ -25,8 +25,7 @@ export const SeasonalIcon = (props: Props) => {
             src={currentIcon} 
             width={100} 
             height={100} 
-            style={{ cursor: 'pointer' }}
-            {...restProps} 
+            {...imgProps} 
         />
     );
 };

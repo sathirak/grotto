@@ -14,7 +14,7 @@ export const CardGrid = () => {
     }
 
     return (
-        <section className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 w-11/12 lg:w-3/4 my-16">
+        <section className="w-11/12 lg:w-3/4 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 my-12">
             {[...Array(10)].map((_, index) =>
                 <Card key={index} {...cardData} />
             )}

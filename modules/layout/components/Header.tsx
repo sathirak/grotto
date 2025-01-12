@@ -11,13 +11,13 @@ export const Header = () => {
 
     return (
         <header className="z-10 top-0 bg-white sticky flex justify-between items-center p-4 w-full border-b" onClick={handleNextIcon}>
-            <a href="/" className="flex items-center gap-4">
+            <a href="/" className="flex items-center gap-4 select-none cursor-pointer">
                 <SeasonalIcon
                     className="size-10"
                     alt="Grotto Logo"
                     currentIndex={iconIndex}
                 />
-                <h1 className="font-medium text-2xl select-none">Grotto</h1>
+                <span className="font-medium text-2xl select-none">Grotto</span>
             </a>
         </header>
     );
