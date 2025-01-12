@@ -6,7 +6,7 @@ export const CardGrid = () => {
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante",
         date: "Yesterday",
         readTime: "2 min read",
-        slug: "/blog/lorem-ipsum",
+        slug: "/devlog/elements",
         image: {
             src: "/assets/blog-placeholder.jpg",
             alt: "Blog Placeholder Image",

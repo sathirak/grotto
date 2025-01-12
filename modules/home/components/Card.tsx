@@ -18,7 +18,7 @@ export const Card = (data: Props) => {
 
     return (
         <a href={data.slug} className='group'>
-            <article className='flex flex-col gap-3'>
+            <article className='flex flex-col gap-3' id={data.slug}>
                 <div className='relative overflow-hidden'>
 
                     {isLoading && (
