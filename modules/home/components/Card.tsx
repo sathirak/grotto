@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { formatDistanceToNow } from 'date-fns';
 
 interface Props {
 	title: string;
-	date: string;
+	date: Date;
 	readTime: string;
 	slug: string;
 	image: {
@@ -15,6 +16,7 @@ interface Props {
 
 export const Card = (data: Props) => {
 	const [isLoading, setIsLoading] = useState(true);
+	const relativeDate = formatDistanceToNow(data.date, { addSuffix: true });
 
 	return (
 		<a href={data.slug} className="group">
@@ -36,7 +38,7 @@ export const Card = (data: Props) => {
 						height={400}
 					/>
 					<div className="select-none bg-white w-full px-4 py-2 absolute group-hover:bottom-0 -bottom-12 rounded-b-md border border-solid transition-all duration-75">
-						{`${data.date} / ${data.readTime}`}
+						{`${relativeDate} / ${data.readTime}`}
 					</div>
 				</div>
 

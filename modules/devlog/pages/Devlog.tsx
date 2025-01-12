@@ -1,4 +1,4 @@
-import { redHatText, redHatMono } from "@/app/layout";
+import { redHatText } from "@/app/layout";
 import { ContentHeader } from "@/modules/devlog/components/ContentHeader";
 
 interface Props {
@@ -16,7 +16,7 @@ export const Devlog = (props: Props) => {
 				title={props.title}
 				description={props.description}
 			/>
-			<section className={`w-11/12 lg:w-1/2 my-8 ${redHatText.className}`}>
+			<section className={`w-11/12 lg:w-1/2 my-8 text-lg ${redHatText.className}`}>
 				{props.children}
 			</section>
 		</main>

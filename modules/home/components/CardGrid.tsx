@@ -3,9 +3,8 @@ import { Card } from "@/modules/home/components/Card";
 export const CardGrid = () => {
 	const cardData = [
 		{
-			title:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante",
-			date: "Yesterday",
+			title: "My first MDX blog post",
+			date: new Date("2025-01-12"),
 			readTime: "2 min read",
 			slug: "/devlog/elements",
 			image: {
