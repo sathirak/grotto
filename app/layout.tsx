@@ -1,6 +1,6 @@
 import { Red_Hat_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/modules/layout/Header";
+import { Header } from "@/modules/layout/components/Header";
 
 const redHatMono = Red_Hat_Mono({
   subsets: ["latin"],
