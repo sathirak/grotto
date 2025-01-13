@@ -8,8 +8,8 @@ interface Props {
 
 export const ContentHeader = (props: Props) => {
 	return (
-		<section className="w-11/12 lg:w-3/5 gap-4 my-8 flex ">
-			<div className="w-1/2">
+		<section className="w-full px-4 lg:w-3/5 gap-4 my-8 lg:flex ">
+			<div className="lg:w-1/2">
 				<h1
 					className={`text-4xl lg:text-5xl font-medium mb-6 ${redHatMono.className}`}
 				>
@@ -19,7 +19,7 @@ export const ContentHeader = (props: Props) => {
 			</div>
 
 			<img
-				className="select-none rounded-md w-1/2 aspect-video object-cover"
+				className="select-none rounded-md lg:w-1/2 aspect-video object-cover"
 				src={`/content/${props.slug}/assets/main.jpg`}
 				alt={props.title}
 			/>

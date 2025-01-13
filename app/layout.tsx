@@ -1,8 +1,6 @@
-
 import { redHatMono } from "@/modules/layout/fonts";
 import "./globals.css";
 import { Header } from "@/modules/layout/components/Header";
-
 
 export default function RootLayout({
 	children,
@@ -28,7 +26,7 @@ export default function RootLayout({
 				<link rel="manifest" href="/favicon/site.webmanifest" />
 			</head>
 			<body
-				className={`${redHatMono.className} text-zinc-800 selection:bg-black selection:text-white`}
+				className={`${redHatMono.className} w-full text-zinc-800 selection:bg-black selection:text-white`}
 			>
 				<Header />
 				{children}

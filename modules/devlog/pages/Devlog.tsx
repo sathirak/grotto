@@ -16,7 +16,9 @@ export const Devlog = (props: Props) => {
 				title={props.title}
 				description={props.description}
 			/>
-			<section className={`w-11/12 lg:w-1/2 my-8 text-lg ${redHatText.className}`}>
+			<section
+				className={`w-full px-4 lg:w-1/2 my-8 text-lg ${redHatText.className}`}
+			>
 				{props.children}
 			</section>
 		</main>
