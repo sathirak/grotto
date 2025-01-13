@@ -1,4 +1,4 @@
-import { redHatMono } from "@/app/layout";
+import { redHatMono } from "@/modules/layout/fonts";
 
 interface Props {
 	slug: string;
@@ -8,7 +8,7 @@ interface Props {
 
 export const ContentHeader = (props: Props) => {
 	return (
-		<section className="w-11/12 lg:w-1/2 my-8 flex ">
+		<section className="w-11/12 lg:w-3/5 gap-4 my-8 flex ">
 			<div className="w-1/2">
 				<h1
 					className={`text-4xl lg:text-5xl font-medium mb-6 ${redHatMono.className}`}

@@ -1,7 +1,7 @@
 "use client";
+import { formatDistanceToNow } from 'date-fns';
 import Image from "next/image";
 import { useState } from "react";
-import { formatDistanceToNow } from 'date-fns';
 
 interface Props {
 	title: string;
@@ -9,7 +9,6 @@ interface Props {
 	readTime: string;
 	slug: string;
 	image: {
-		src: string;
 		alt: string;
 	};
 }
@@ -19,7 +18,7 @@ export const Card = (data: Props) => {
 	const relativeDate = formatDistanceToNow(data.date, { addSuffix: true });
 
 	return (
-		<a href={data.slug} className="group">
+		<a href={`devlog/${data.slug}`} className="group">
 			<article className="flex flex-col gap-3" id={data.slug}>
 				<div className="relative overflow-hidden">
 					{isLoading && (
@@ -32,7 +31,7 @@ export const Card = (data: Props) => {
 						}`}
 						loading="eager"
 						onLoadingComplete={() => setIsLoading(false)}
-						src={data.image.src}
+						src={`/content/${data.slug}/assets/main.jpg`}
 						alt={data.image.alt}
 						width={900}
 						height={400}

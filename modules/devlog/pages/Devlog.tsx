@@ -1,5 +1,5 @@
-import { redHatText } from "@/app/layout";
 import { ContentHeader } from "@/modules/devlog/components/ContentHeader";
+import { redHatText } from "@/modules/layout/fonts";
 
 interface Props {
 	children: React.ReactNode;

@@ -13,8 +13,7 @@ export async function generateMetadata(
 		`@/public/content/${slug}/main.mdx`
 	);
 	return {
-		// biome-ignore lint/style/useTemplate: <explanation>
-		title: metadata.metadata.title + " | Devlog",
+		title: `${metadata.metadata.title} | Devlog`,
 	};
 }
 interface Props {

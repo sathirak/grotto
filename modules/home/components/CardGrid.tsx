@@ -6,9 +6,8 @@ export const CardGrid = () => {
 			title: "My first MDX blog post",
 			date: new Date("2025-01-12"),
 			readTime: "2 min read",
-			slug: "/devlog/elements",
+			slug: "elements",
 			image: {
-				src: "/assets/blog-placeholder.jpg",
 				alt: "Blog Placeholder Image",
 			},
 		},
