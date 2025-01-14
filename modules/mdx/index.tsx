@@ -1,3 +1,3 @@
-import { Hello } from "@/modules/mdx/components/Hello";
+import { Code } from "@/modules/mdx/components/Code";
 
-export { Hello };
+export { Code };

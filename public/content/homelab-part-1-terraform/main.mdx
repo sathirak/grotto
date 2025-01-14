@@ -1,3 +1,5 @@
+import { Code } from "@mdx"
+
 export const metadata = {
   slug: "homelab-part-1-terraform",
   title: "Homelab Part 1, Terraform",
@@ -39,10 +41,11 @@ First things first, created a [Github Repo](https://github.com/sathirak/homelab)
 
 Step two, creating the terraform files.
 
-A simple **provider.tf** configures what our Infrastucture provider is and the general Terraform configuration.
+A simple provider.tf configures what our Infrastucture provider is and the general Terraform configuration.
 This is my second time using Terraform, so some of them might still not be optimized.
 
-```terraform
+
+<Code lang="terraform" file="provider.tf" code={`
 terraform {
   required_providers {
     digitalocean = {
@@ -62,12 +65,11 @@ provider "digitalocean" {
 data "digitalocean_ssh_key" "terraform" {
   name = "id_rsa bigchungus"
 } 
-
-```
+`}/>
 
 and next a **homelab.tf** file to specify what and where our droplet is.
 
-```terraform
+<Code lang="terraform" file="homelab.tf" code={`
 resource "digitalocean_droplet" "homelab" {
   image = "ubuntu-22-04-x64"
   name = "turbochungus"
@@ -84,24 +86,22 @@ resource "digitalocean_droplet" "homelab" {
     timeout = "2m"
   }
 }
-```
+`}/>
 
 Now then you'll need a DigitalOcean API key and an SSH key configured into your account,
-My SSH key is named **id_rsa bigchungus** and I have a DigitalOcean API key generated, which is a secret.
+My SSH key is named id_rsa bigchungus and I have a DigitalOcean API key generated, which is a secret.
 
 Now you need to get terraform installed. [This is the official guide](https://developer.hashicorp.com/terraform/install)
 
 And then you need to run a few commands and you'll have a server up and running.
 
-```bash
-
+<Code lang="bash" code={`
 terraform init
 
 terraform plan -out=infra.out
 
 terraform apply infra.out
-
-```
+`}/>
 
 While executing it will ask for the DigitalOcean API key and the SSH key path.
 
@@ -113,42 +113,39 @@ First we'll need to access the server,
 
 So I SSHed into the server and installed ngnix.
 
-```bash
+<Code lang="bash" code={`
 sudo apt update
 sudo apt install -y nginx
-```
+`}/>
 
 Then after the ngnix server is restarted, I went to /var/www/html/ and added my static html file.
 
-```bash
-
+<Code lang="bash" code={`
 cd /var/www/html
 touch index.html
 sudo nano index.html
-
-```
+`}/>
 
 You can make the HTML file however you want, you can get it via git, or copy and paster it, whaterver you want.
 
 Now we need to check and fix some permissions.
 
-```bash
+<Code lang="bash" code={`
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 755 /var/www/html
-```
+`}/>
 
 Basically what this does is, it changes the owner of the directory to the ngnix user and gives the user read, write and execute permissions.
 
 Then get the default ngnix configuration
 
-```bash
+<Code lang="bash" code={`
 sudo nano /etc/nginx/sites-available/default
-```
+`}/>
 
 Make sure it's somewhat like the configuration below:
 
-```nginx
-
+<Code lang="nginx" code={`
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -162,15 +159,14 @@ server {
         try_files $uri $uri/ =404;
     }
 }
-
-```
+`}/>
 
 Then test and restart the ngnix server
 
-```bash
+<Code lang="bash" code={`
 sudo nginx -t
 sudo systemctl restart nginx
-```
+`}/>
 
 Now if I go to the Server's IP address, I can see the static site. Yay!
 
@@ -178,7 +174,7 @@ Now if I go to the Server's IP address, I can see the static site. Yay!
 
 But a big part of why I'm learning this is so I can automate it, so let's automate this whole thing in Terraform by changing the homelab.tf file.
 
-```terraform
+<Code lang="terraform" file="homelab.tf" code={`
 resource "digitalocean_droplet" "homelab" {
   image = "ubuntu-22-04-x64"
   name = "turbochungus"
@@ -211,7 +207,7 @@ resource "digitalocean_droplet" "homelab" {
     ]
   }
 }
-```
+`}/>
 
 The whole setting up thing will be automated now.
 

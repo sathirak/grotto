@@ -29,3 +29,8 @@ body {
 	font-family: monospace;
 	scrollbar-gutter: stable;
 }
+
+.catppuccin-latte {
+	background: none !important;
+	color: white !important;
+}
