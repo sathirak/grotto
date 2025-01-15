@@ -31,7 +31,7 @@ export const Code = (props: Props) => {
 
 	return (
 		<article>
-			<div className="relative text-sm border block p-4 my-4 rounded-md">
+			<div className="relative text-sm border block p-4 my-4 rounded-md overflow-hidden">
 				<div className="flex justify-between items-center pb-4">
 					<h6>{props.file?.trim()}</h6>
 					<button
@@ -47,10 +47,12 @@ export const Code = (props: Props) => {
 						)}
 					</button>
 				</div>
-				<code
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
-					dangerouslySetInnerHTML={{ __html: highlighted }}
-				/>
+				<div className="overflow-x-auto">
+					<code
+						// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+						dangerouslySetInnerHTML={{ __html: highlighted }}
+					/>
+				</div>
 			</div>
 		</article>
 	);

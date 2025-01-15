@@ -3,6 +3,15 @@ import { Card } from "@/modules/home/components/Card";
 export const CardGrid = () => {
 	const cardData = [
 		{
+			title: "Homelab Part 2, Kubernetes",
+			date: new Date("2025-01-15"),
+			readTime: "5 min read",
+			slug: "homelab-part-2-kubernetes",
+			image: {
+				alt: "ArgoCD login page",
+			},
+		},
+		{
 			title: "Homelab Part 1, Terraform",
 			date: new Date("2025-01-13"),
 			readTime: "5 min read",
