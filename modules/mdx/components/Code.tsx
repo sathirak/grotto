@@ -31,7 +31,7 @@ export const Code = (props: Props) => {
 
 	return (
 		<article>
-			<div className="relative text-sm border block p-4 my-4 rounded-md overflow-hidden">
+			<div className="relative text-sm border block p-4 my-4 rounded-md">
 				<div className="flex justify-between items-center pb-4">
 					<h6>{props.file?.trim()}</h6>
 					<button
@@ -41,13 +41,13 @@ export const Code = (props: Props) => {
 						title="Copy to clipboard"
 					>
 						{copied ? (
-							<ClipboardCheckIcon className="size-4" />
+							<ClipboardCheckIcon className="size-4 hover:scale-125 text-lime-500 transition-transform" />
 						) : (
-							<ClipboardIcon className="size-4" />
+							<ClipboardIcon className="size-4 hover:scale-125 transition-transform" />
 						)}
 					</button>
 				</div>
-				<div className="overflow-x-auto">
+				<div>
 					<code
 						// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
 						dangerouslySetInnerHTML={{ __html: highlighted }}

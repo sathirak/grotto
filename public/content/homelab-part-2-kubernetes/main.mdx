@@ -9,6 +9,8 @@ export const metadata = {
 In the last part of the Homelab series, we configured Terraform so our VPS can effectively be spawned and despawned via commands.
 Now we need to configure our homelab so we can use it to deploy and test applications. Basically, we need to run Kubernetes on our server.
 
+## Many types of Kubernetes
+
 There are six main ways to run Kubernetes on a server (IDK there might be more):
 
 [Talos](https://www.talos.dev/) - Basically a fully fledged Linux distro made for Kubernetes, communication is done via an API, hence minimal, secure and production grade.
@@ -22,6 +24,8 @@ There are six main ways to run Kubernetes on a server (IDK there might be more):
 [Minikube](https://minikube.sigs.k8s.io/docs/) - Used for locally testing and development
 
 [MicroK8s](https://microk8s.io/) - Made by the guys who made Ubuntu, based on snap and plugins, heavier resource use.
+
+## K3s
 
 There are many Kubernetes distributions, but for now we are going to use k3s.
 
@@ -39,6 +43,8 @@ Basically this command is enough for that.
 curl -sfL https://get.k3s.io | sh -
 sudo chmod 644 /etc/rancher/k3s/k3s.yaml
 `}/>
+
+## ArgoCD
 
 Now actually we have docker, kubectl and k3s installed. So we have a fully operational Kubernetes cluster waiting to be used.
 

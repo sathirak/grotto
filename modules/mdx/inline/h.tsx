@@ -13,7 +13,7 @@ export const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => {
 	const id = slugify(props.children?.toString());
 	return (
 		<h1
-			className={`text-4xl font-medium mt-8 mb-4 ${redHatMono.className}`}
+			className={`text-4xl font-medium mt-8 mb-4 hover:text-zinc-600 transition-colors ${redHatMono.className}`}
 			{...props}
 			id={id}
 		>
@@ -28,7 +28,7 @@ export const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => {
 	const id = slugify(props.children?.toString());
 	return (
 		<h2
-			className={`text-3xl font-medium mt-8 mb-4 ${redHatMono.className}`}
+			className={`text-3xl font-medium mt-8 mb-4 hover:text-zinc-600 transition-colors ${redHatMono.className}`}
 			{...props}
 			id={id}
 		>
@@ -43,7 +43,7 @@ export const H3 = (props: HTMLAttributes<HTMLHeadingElement>) => {
 	const id = slugify(props.children?.toString());
 	return (
 		<h3
-			className={`text-2xl font-medium mt-6 mb-3 ${redHatMono.className}`}
+			className={`text-2xl font-medium mt-6 mb-3 hover:text-zinc-600 transition-colors ${redHatMono.className}`}
 			{...props}
 			id={id}
 		>
@@ -58,7 +58,7 @@ export const H4 = (props: HTMLAttributes<HTMLHeadingElement>) => {
 	const id = slugify(props.children?.toString());
 	return (
 		<h4
-			className={`text-xl font-medium mt-6 mb-3 ${redHatMono.className}`}
+			className={`text-xl font-medium mt-6 mb-3 hover:text-zinc-600 transition-colors ${redHatMono.className}`}
 			{...props}
 			id={id}
 		>
@@ -73,7 +73,7 @@ export const H5 = (props: HTMLAttributes<HTMLHeadingElement>) => {
 	const id = slugify(props.children?.toString());
 	return (
 		<h5
-			className={`text-lg font-medium mt-4 mb-2 ${redHatMono.className}`}
+			className={`text-lg font-medium mt-4 mb-2 hover:text-zinc-600 transition-colors ${redHatMono.className}`}
 			{...props}
 			id={id}
 		>
@@ -88,7 +88,7 @@ export const H6 = (props: HTMLAttributes<HTMLHeadingElement>) => {
 	const id = slugify(props.children?.toString());
 	return (
 		<h6
-			className={`text-base font-medium mt-4 mb-2 ${redHatMono.className}`}
+			className={`text-base font-medium mt-4 mb-2 hover:text-zinc-600 transition-colors ${redHatMono.className}`}
 			{...props}
 			id={id}
 		>

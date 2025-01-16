@@ -33,4 +33,11 @@ body {
 .catppuccin-latte {
 	background: none !important;
 	color: white !important;
+	line-break: anywhere;
+}
+
+.shiki{
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
+	overflow: auto;
 }
