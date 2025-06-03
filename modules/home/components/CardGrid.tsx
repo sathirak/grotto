@@ -23,7 +23,7 @@ export const CardGrid = () => {
 	];
 
 	return (
-		<section className="w-full lg:w-3/4 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 my-12">
+		<section className="w-full lg:w-3/4 grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 lg:gap-10 sm:grid-cols-2 xl:grid-cols-3 my-8 sm:my-12 px-4 sm:px-0">
 			{cardData.map((card) => (
 				<Card key={card.title} {...card} />
 			))}
