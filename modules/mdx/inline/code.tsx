@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const Code = (data: Props) => (
-	<code className="text-sm border block p-4 my-4 rounded-md text-wrap break-all">
+	<code className="text-sm border inline p-1 px-3 rounded-sm text-wrap break-all">
 		{data.children}
 	</code>
 );

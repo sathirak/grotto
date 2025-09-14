@@ -26,7 +26,7 @@ export const Card = (data: Props) => {
 					)}
 
 					<Image
-						className={`select-none rounded-md aspect-video object-cover  ${
+						className={`select-none rounded-md aspect-video object-cover border border-solid  ${
 							isLoading ? "hidden" : "block"
 						}`}
 						loading="eager"

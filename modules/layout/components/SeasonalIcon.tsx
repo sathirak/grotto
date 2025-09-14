@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 import FarmlandImage from "@/public/assets/icons/farmland.png";

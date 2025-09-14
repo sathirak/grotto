@@ -3,6 +3,15 @@ import { Card } from "@/modules/home/components/Card";
 export const CardGrid = () => {
 	const cardData = [
 		{
+			title: "Healthcheck Everything, Everywhere, All at Once with PulseBridge",
+			date: new Date("2025-09-14T20:26:00"),
+			readTime: "5 min read",
+			slug: "healthcheck-everything-using-pulsebridge",
+			image: {
+				alt: "Homelab Static image",
+			},
+		},
+		{
 			title: "Homelab Part 2, Kubernetes",
 			date: new Date("2025-01-15"),
 			readTime: "5 min read",
