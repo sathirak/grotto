@@ -3,6 +3,14 @@ import type { Metadata, ResolvingMetadata } from "next/types";
 
 export const dynamicParams = false;
 
+export async function generateStaticParams() {
+	return [
+		{ slug: 'healthcheck-everything-using-pulsebridge' },
+		{ slug: 'homelab-part-1-terraform' },
+		{ slug: 'homelab-part-2-kubernetes' }
+	];
+}
+
 export async function generateMetadata(
 	props: Props,
 	parent: ResolvingMetadata,
