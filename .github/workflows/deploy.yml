@@ -37,7 +37,7 @@ jobs:
         id: pnpm-install
         with:
           version: 10.11.0
-          run_install: false
+          run_install: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -46,14 +46,14 @@ jobs:
           cache: 'pnpm'
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
+        # with:
           # Automatically inject basePath in your Next.js configuration file and disable
           # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
           #
           # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
-      - name: Install dependencies
-        run: pnpm install
+          # static_site_generator: next
+      # - name: Install dependencies
+      #   run: pnpm install
       - name: Build with Next.js
         run: pnpm build
       - name: Upload artifact
