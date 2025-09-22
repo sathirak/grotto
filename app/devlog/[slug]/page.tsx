@@ -4,10 +4,11 @@ import type { Metadata, ResolvingMetadata } from "next/types";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
+	// List of your blog post slugs
 	return [
 		{ slug: 'healthcheck-everything-using-pulsebridge' },
 		{ slug: 'homelab-part-1-terraform' },
-		{ slug: 'homelab-part-2-kubernetes' }
+		{ slug: 'homelab-part-2-kubernetes' },
 	];
 }
 
