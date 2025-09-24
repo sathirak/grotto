@@ -23,6 +23,9 @@ importers:
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
+      animejs:
+        specifier: ^4.1.4
+        version: 4.1.4
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -431,6 +434,9 @@ packages:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  animejs@4.1.4:
+    resolution: {integrity: sha512-BdnlkOx959ehvD56Gog6qafRIn6U1gOS5ZNNGK/QHbCv3Ha09IDarplQJbujavki0uT4moeP5RagtoPplhvPAQ==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -1579,6 +1585,8 @@ snapshots:
       acorn: 8.14.0
 
   acorn@8.14.0: {}
+
+  animejs@4.1.4: {}
 
   ansi-regex@5.0.1: {}
 

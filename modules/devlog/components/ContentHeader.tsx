@@ -1,4 +1,8 @@
+"use client";
+
 import { redHatMono } from "@/modules/layout/fonts";
+import { useEffect, useRef } from "react";
+import { animate, text, stagger } from "animejs";
 
 interface Props {
 	slug: string;
@@ -7,10 +11,27 @@ interface Props {
 }
 
 export const ContentHeader = (props: Props) => {
+	const titleRef = useRef<HTMLHeadingElement>(null);
+
+	useEffect(() => {
+		if (titleRef.current) {
+			text.split(titleRef.current, {
+				lines: { wrap: 'clip' },
+			})
+			.addEffect(({ lines }) => animate(lines, {
+				y: { to: ['100%', '0%'] },
+				duration: 750,
+				ease: 'out(3)',
+				delay: stagger(200),
+			}));
+		}
+	}, []);
+
 	return (
 		<section className="w-full px-4 lg:w-3/5 gap-4 my-8 lg:flex ">
 			<div className="lg:w-1/2">
 				<h1
+					ref={titleRef}
 					className={`text-4xl lg:text-5xl font-medium mb-6 ${redHatMono.className}`}
 				>
 					{props.title}

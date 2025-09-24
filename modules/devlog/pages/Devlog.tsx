@@ -1,4 +1,7 @@
+"use client";
+
 import { ContentHeader } from "@/modules/devlog/components/ContentHeader";
+import { ScrollGuide } from '@/modules/devlog/components/ScrollGuide';
 import { redHatText } from "@/modules/layout/fonts";
 
 interface Props {
@@ -10,7 +13,8 @@ interface Props {
 
 export const Devlog = (props: Props) => {
 	return (
-		<main className={"flex flex-col items-center"}>
+		<main className={"flex flex-col items-center relative"}>
+			<ScrollGuide />
 			<ContentHeader
 				slug={props.slug}
 				title={props.title}
