@@ -3,9 +3,18 @@ import { Card } from "@/modules/home/components/Card";
 export const CardGrid = () => {
 	const cardData = [
 		{
+			title: "Omarchy, a Linux distro by DHH",
+			date: new Date("2025-09-26T20:26:00"),
+			readTime: "5 min read",
+			slug: "omarchy-a-linux-distro-by-dhh",
+			image: {
+				alt: "Homelab Static image",
+			},
+		},
+		{
 			title: "Healthcheck Everything, Everywhere, All at Once with PulseBridge",
 			date: new Date("2025-09-14T20:26:00"),
-			readTime: "5 min read",
+			readTime: "2 min read",
 			slug: "healthcheck-everything-using-pulsebridge",
 			image: {
 				alt: "Homelab Static image",

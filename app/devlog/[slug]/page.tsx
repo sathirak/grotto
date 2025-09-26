@@ -7,6 +7,7 @@ export async function generateStaticParams() {
 	// List of your blog post slugs
 	return [
 		{ slug: 'healthcheck-everything-using-pulsebridge' },
+		{ slug: 'omarchy-a-linux-distro-by-dhh' },
 		{ slug: 'homelab-part-1-terraform' },
 		{ slug: 'homelab-part-2-kubernetes' },
 	];
