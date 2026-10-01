@@ -10,7 +10,7 @@ import { Table, THead, TBody, TR, TH, TD } from "@/modules/mdx/inline/table";
 <Abstract>
 This experiment explores ternary computing through the implementation of a balanced ternary CPU emulator, the Eris BST-27i. By replacing binary logic with balanced ternary $\{-1, 0, 1\}$, we demonstrate that ternary architectures offer significant advantages in information density, dynamic range, and inherent support for signed integers without additional sign bits. We analyze the architectural implications of ternary systems, including register design, address space organization, and ALU implementation, and present a quantitative comparison with the RV32I RISC-V architecture.
 
-[https://github.com/sathirak/eris-bst-27i](https://github.com/sathirak/eris-bst-27i)
+[https://github.com/sathirak/eris-bst-27i-emu](https://github.com/sathirak/eris-bst-27i-emu)
 </Abstract>
 
 Bits have been the foundation of computing since its inception. They're elegant in their simplicity: $0\text{V}$ for logical $0$ and $\sim3.3\text{V}$ for logical $1$. This binary representation propagates through wires, integrates into logical circuits, and operates within doped silicon. But what if we expanded to $3$, $4$, or even $5$ voltage levels instead of just $2$? What would fundamentally change?
@@ -23,7 +23,7 @@ Yet studies have been done regardless. For example, the **Setun** from 67 years 
 
 ## Balanced Ternary
 
-For [this experiment](https://github.com/sathirak/eris-bst-27i), I used a **balanced trit** system. Instead of using $(0,1)$ like in binary or $(0,1,2)$ in standard ternary, I used $(-1, 0, 1)$, or more commonly notated as $(T, 0, 1)$ where $T$ represents "trit negative".
+For [this experiment](https://github.com/sathirak/eris-bst-27i-emu), I used a **balanced trit** system. Instead of using $(0,1)$ like in binary or $(0,1,2)$ in standard ternary, I used $(-1, 0, 1)$, or more commonly notated as $(T, 0, 1)$ where $T$ represents "trit negative".
 
 This balanced representation has interesting mathematical properties that make certain operations more elegant than in binary.
 
